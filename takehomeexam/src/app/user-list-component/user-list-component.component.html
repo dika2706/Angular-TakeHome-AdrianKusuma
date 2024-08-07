@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div class="ResultsTable">
+            <h1>User List</h1>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Website</th>
+                    </tr>
+                    <tbody>
+                        <tr *ngFor="let User of users">
+                            <td>{{User.name}}</td>
+                            <td>{{User.email}}</td>
+                            <td>{{User.website}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </body>
+</html>
