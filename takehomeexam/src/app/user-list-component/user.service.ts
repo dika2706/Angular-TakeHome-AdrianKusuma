@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-
-import { Users } from './models/users';
+import { Users } from '../models/users';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs'; //observable syncc for subscribe
 @Injectable({ //dependency injection
   providedIn: 'root'
 })
@@ -16,8 +15,5 @@ export class UserService {
     return this.http.get<Users[]>(this.apiURL + "/users");
   }
 
-  //ret  user val or undefined if fail to find
-  getUser(id: number ): Users | undefined {
-    return this.users.find(us => us.id === id);
-  }
+  
 }

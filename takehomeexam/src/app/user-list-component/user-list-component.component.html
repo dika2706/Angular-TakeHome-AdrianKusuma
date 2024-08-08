@@ -7,12 +7,15 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Website</th>
+                        <th class="emptytab"></th>
                     </tr>
-                    <tbody>
-                        <tr *ngFor="let User of users">
+                    <tbody class="tableBody">
+                        <tr *ngFor="let User of users" class="table-content">
                             <td>{{User.name}}</td>
                             <td>{{User.email}}</td>
                             <td>{{User.website}}</td>
+                            <button class="nav-link" [routerLink]="['/data', User.id]">more info.</button> 
+                            <!-- on click send User.id -->
                         </tr>
                     </tbody>
                 </table>

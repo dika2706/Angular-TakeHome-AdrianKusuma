@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>{{user.name}}'s Information</h1>
+        <div class="box">
+            <ul>
+                <li><b>id:</b> {{user.id}}</li>
+                <li><b>Name: </b>{{user.name}}</li>
+                <li><b>Username:</b> {{user.username}}</li>
+                <li><b>E-mail: </b> <a href="mailto:{{user.email}}" class="external-link">{{user.email}}</a></li>
+                <li><b>Address:</b> {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}} <br> <p class="subsection">lat.: {{user.address.geo.lat}}, lng.: {{user.address.geo.lng}} </p></li>
+                <li><b>Phone: </b><a class="external-link" href="tel:{{user.phone}}">{{user.phone}}</a></li>
+                <li><b>Website: </b> <a class="external-link" href="http://{{user.website}}">{{user.website}}</a></li>
+                <li><b>Company:</b> {{user.company.name}} <br> <p class="subsection">Company catchphrase: {{user.company.catchPhrase}} <br> Company business: {{user.company.bs}}</p></li>
+            </ul>
+            <button class="fn" (click)="copyMessage()">Copy as json</button>
+
+        </div>
+        <button class="nav-link" [routerLink]="['/']">Back</button>
+    </body>
+</html>
